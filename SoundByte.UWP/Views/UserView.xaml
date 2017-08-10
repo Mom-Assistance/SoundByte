@@ -121,22 +121,22 @@
                             <TextBlock Text="{x:Bind Path=ViewModel.User.Username, Mode=OneWay}" Opacity="0.8" FontSize="50" FontWeight="Bold" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" HorizontalAlignment="Stretch" />
                             <!-- Followers -->
                             <StackPanel Orientation="Horizontal"  Margin="0,15,0,0">
-                                <TextBlock Text="&#xE716;" FontFamily="Segoe MDL2 Assets" Margin="0,4,6,0" FontSize="14" Opacity="0.8" />
+                                <TextBlock Text="&#xE716;" FontFamily="Segoe MDL2 Assets" Margin="0,4,6,0" FontSize="15" Opacity="0.8" />
                                 <TextBlock Text="{x:Bind Path=ViewModel.User.FollowersCount, Converter={StaticResource FormattedValueConverter}, Mode=OneWay}"  x:Name="FollowersText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
                                 <TextBlock Text="Followers" Margin="5,0,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
                             </StackPanel>
 
                             <!-- Tracks -->
                             <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                <TextBlock Text="&#xEA69;" FontFamily="Segoe MDL2 Assets"  Margin="0,4,6,0" FontSize="14" Opacity="0.8" />
+                                <TextBlock Text="&#xEA69;" FontFamily="Segoe MDL2 Assets"  Margin="0,4,6,0" FontSize="15" Opacity="0.8" />
                                 <TextBlock Text="{x:Bind Path=ViewModel.User.TrackCount, Converter={StaticResource FormattedValueConverter}, Mode=OneWay}"  x:Name="TracksText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
                                 <TextBlock Text="Tracks" Margin="5,0,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
                             </StackPanel>
 
                             <!-- Playlists -->
                             <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                <TextBlock Text="&#xE14C;" FontFamily="Segoe MDL2 Assets" Margin="0,4,6,0" FontSize="14" Opacity="0.8" />
-                                <TextBlock Text="{x:Bind Path=ViewModel.User.PlaylistCount, Converter={StaticResource FormattedValueConverter}, Mode=OneWay}"  x:Name="SetsText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
+                            <TextBlock Text="&#xE14C;" FontFamily="Segoe MDL2 Assets" Margin="0,4,6,0" FontSize="15" Opacity="0.8" />
+                            <TextBlock Text="{x:Bind Path=ViewModel.User.PlaylistCount, Converter={StaticResource FormattedValueConverter}, Mode=OneWay}"  x:Name="SetsText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
                                 <TextBlock Text="Playlists" Margin="5,0,0,0"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
                             </StackPanel>
                         </StackPanel>
@@ -144,7 +144,7 @@
 
                     <StackPanel Orientation="Horizontal" Margin="65,330,0,0" VerticalAlignment="Top">
                         <elements:SoundByteButton Glyph="{x:Bind ViewModel.FollowUserIcon, Mode=OneWay}" Label="{x:Bind ViewModel.FollowUserText, Mode=OneWay}" Click="{x:Bind ViewModel.FollowUser}" IsEnabled="{x:Bind ViewModel.ShowFollowButton, Mode=OneWay}" Margin="0,0,25,0" />
-                        <elements:SoundByteButton Glyph="{x:Bind ViewModel.PinButtonIcon, Mode=OneWay}" Label="{x:Bind ViewModel.PinButtonText, Mode=OneWay}" Click="{x:Bind ViewModel.PinUser}" Margin="0,0,25,0" />
+                        <!--elements:SoundByteButton Glyph="{x:Bind ViewModel.PinButtonIcon, Mode=OneWay}" Label="{x:Bind ViewModel.PinButtonText, Mode=OneWay}" Click="{x:Bind ViewModel.PinUser}" Margin="0,0,25,0" / -->
                         <elements:SoundByteButton x:Name="UploadButton" Glyph="&#xE898;" Label="Upload Track" Click="{x:Bind UploadTrack}" Margin="0,0,25,0" />
                 </StackPanel>
 
@@ -153,7 +153,7 @@
                     <!-- About the user -->
                     <PivotItem x:Name="AboutPivot">
                         <PivotItem.Header>
-                            <TextBlock Text="About" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                            <TextBlock Text="About" FontSize="20" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
                         </PivotItem.Header>
                         <controls:MarkdownTextBlock TextWrapping="WrapWholeWords"
                                                     HorizontalAlignment="Stretch" 
@@ -165,7 +165,7 @@
                     <!-- The users tracks -->
                     <PivotItem x:Name="TracksPivot">
                         <PivotItem.Header>
-                            <TextBlock Text="Tracks" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                            <TextBlock Text="Tracks" FontSize="20" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
                         </PivotItem.Header>
                         <GridView x:Name="TracksView"
                                   Style="{StaticResource UserGridViewStyle}"
@@ -187,7 +187,7 @@
                     <!-- The users likes -->
                     <PivotItem x:Name="LikesPivot">
                         <PivotItem.Header>
-                            <TextBlock Text="Likes" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                            <TextBlock Text="Likes" FontSize="20" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
                         </PivotItem.Header>
                         <GridView x:Name="LikesView"
                                   Style="{StaticResource UserGridViewStyle}"
@@ -210,7 +210,7 @@
                     <!-- The users playlists / liked playlists -->
                     <PivotItem x:Name="PlaylistsPivot">
                         <PivotItem.Header>
-                            <TextBlock Text="Playlists" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                            <TextBlock Text="Playlists" FontSize="20" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
                         </PivotItem.Header>
                         <GridView x:Name="PlaylistsView" 
                                   Style="{StaticResource UserGridViewStyle}"
@@ -231,7 +231,7 @@
 
                     <PivotItem x:Name="FollowersPivot">
                         <PivotItem.Header>
-                            <TextBlock Text="Followers" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                            <TextBlock Text="Followers" FontSize="20" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
                         </PivotItem.Header>
                         <GridView x:Name="FollowersView" 
                                   Style="{StaticResource UserGridViewStyle}"
@@ -252,7 +252,7 @@
 
                     <PivotItem x:Name="FollowingsPivot">
                         <PivotItem.Header>
-                            <TextBlock Text="Followings" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                            <TextBlock Text="Followings" FontSize="20" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
                         </PivotItem.Header>
                         <GridView x:Name="FollowingsView" 
                                   Style="{StaticResource UserGridViewStyle}"

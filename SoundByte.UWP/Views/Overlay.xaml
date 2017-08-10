@@ -7,8 +7,8 @@
     xmlns:brushes="using:UICompositionAnimations.Brushes">
 
     <Grid Background="{ThemeResource ShellBackground}" RequestedTheme="Dark">
-       <Grid.RowDefinitions>
-           <RowDefinition Height="*" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
            <RowDefinition Height="*" />
            <RowDefinition Height="*" />
            <RowDefinition Height="*" />
