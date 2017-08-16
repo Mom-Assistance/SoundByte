@@ -96,5 +96,28 @@ namespace SoundByte.UWP.Views.Application
             // We are not loading
             App.IsLoading = false;
         }
+
+        // Or are we
+        //App.IsLoading = true;
+        private void TextHeader_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+
+        private void Textblock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
+
+
+
+
+
+
+
+
