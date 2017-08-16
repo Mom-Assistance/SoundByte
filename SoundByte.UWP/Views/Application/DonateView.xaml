@@ -128,10 +128,18 @@
                     </GridView.Items>
                 </GridView>
 
-                <TextBlock  Opacity="0.7" FontSize="14" Margin="0,8,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Thank you! If you have any questions, feel free to contact be below.&#x0a;- Dominic Maas" />
+                <TextBlock  Opacity="0.7" FontSize="14" Margin="0,8,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Thank you! If you have any questions, feel free to contact me below.&#x0a;- Dominic Maas" />
 
                 <HyperlinkButton Margin="0,5,0,-5" ContentTemplate="{StaticResource HyperlinkClean}" Content="Email: (dominic.maas@live.com)" NavigateUri="mailto:dominic.maas@live.com" />
                 <HyperlinkButton ContentTemplate="{StaticResource HyperlinkClean}" Content="Twitter: (@dominicjmaas)" NavigateUri="https://gridentertainment.net/fwlink/2GOYlyY4zK" />
+                <TextBlock  Opacity="0.7" FontSize="14" Margin="0,8,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="If you have any questions about this version feel free to contact me below.&#x0a;" />
+
+                <HyperlinkButton Margin="0,5,0,-5" ContentTemplate="{StaticResource HyperlinkClean}" Content="Email: (assistancemom@gmail.com)" NavigateUri="mailto:assistancemom@gmail.com" />
+                <HyperlinkButton ContentTemplate="{StaticResource HyperlinkClean}" Content="Twitter: (@MOMASOFC)" NavigateUri="https://twitter.com/MOMASOFC" />
+                <HyperlinkButton ContentTemplate="{StaticResource HyperlinkClean}" Content="Join Damians discord server" NavigateUri="https://discord.gg/jJwMy6r" />
+                <HyperlinkButton ContentTemplate="{StaticResource HyperlinkClean}" Content="Join his programming discord server" NavigateUri="https://discord.gg/3PtFGFu" />
+                <HyperlinkButton ContentTemplate="{StaticResource HyperlinkClean}" Content="Join Hopson Community discord server" NavigateUri="https://discord.gg/feKbBwS" />
+
             </StackPanel>
         </ScrollViewer>
     </Grid>

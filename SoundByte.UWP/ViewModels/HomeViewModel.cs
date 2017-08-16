@@ -1,5 +1,6 @@
 ﻿//*********************************************************
 // Copyright (c) Dominic Maas. All rights reserved.
+// Copyright (c) Damian Luc. All rights reserved.
 // This code is licensed under the MIT License (MIT).
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
 // ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
@@ -121,6 +122,9 @@ namespace SoundByte.UWP.ViewModels
             App.IsLoading = false;
         }
 
+        // or are we
+        //App.IsLoading = True;
+      //}
 
         public async void PlayChartItem(object sender, ItemClickEventArgs e)
         {

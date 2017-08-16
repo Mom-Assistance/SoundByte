@@ -21,8 +21,12 @@ namespace SoundByte.UWP.ViewModels
     /// <summary>
     /// Base class for all view models to extend off of
     /// </summary>
-    public class BaseViewModel : INotifyPropertyChanged, IDisposable
+    public class BaseViewModel : INotifyPropertyChanged, IDisposable, IBaseViewModel, IBaseViewModel1
     {
+        public BaseViewModel()
+        {
+        }
+
         /// <summary>
         /// The global playback service
         /// </summary>
@@ -63,6 +67,23 @@ namespace SoundByte.UWP.ViewModels
         public virtual void Dispose()
         {
             // On the base view model, we do nothing
+}
+
+        public override bool Equals(object obj)
+        {
+            var model = obj as BaseViewModel;
+            return model != null &&
+                   EqualityComparer<PlaybackService>.Default.Equals(Service, model.Service);
+        }
+
+        public override int GetHashCode()
+        {
+            return 1514353572 + EqualityComparer<PlaybackService>.Default.GetHashCode(Service);
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }

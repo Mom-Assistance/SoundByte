@@ -188,7 +188,7 @@ namespace SoundByte.UWP.ViewModels
             }
         }
 
-        public async void ToggleLikePlaylist()
+        public void ToggleLikePlaylist()
         {
             // Show the loading ring
             App.IsLoading = true;

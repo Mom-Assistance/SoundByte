@@ -43,6 +43,7 @@ namespace SoundByte.UWP.UserControls
         {
             get => this.GetValue(GlyphProperty) as string;
             set => this.SetValue(GlyphProperty, value);
+            
         }
 
         public SoundByteButton()

@@ -35,7 +35,7 @@
         </VisualStateManager.VisualStateGroups>
         
         <Grid x:Name="MobileGrid" Visibility="Visible" Background="{ThemeResource ShellNavigationBackground}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="48" Canvas.ZIndex="100">
-            <TextBlock Text="Getting Started" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="18" />
+            <TextBlock Text="Lets Start" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="25" />
         </Grid>
 
         <ScrollViewer HorizontalAlignment="Stretch">

@@ -21,6 +21,7 @@ using SoundByte.UWP.Dialogs;
 using SoundByte.UWP.Helpers;
 using SoundByte.UWP.Services;
 using SoundByte.UWP.Views.General;
+using SoundByte.UWP.ViewModels;
 
 namespace SoundByte.UWP.Views.Application
 {
@@ -35,6 +36,7 @@ namespace SoundByte.UWP.Views.Application
 
         // View model for the settings page
         public ViewModels.SettingsViewModel ViewModel = new ViewModels.SettingsViewModel();
+        private ISettingsView_Bindings bindings;
 
         /// <summary>
         /// Setup the page
@@ -49,6 +51,37 @@ namespace SoundByte.UWP.Views.Application
             DataContext = ViewModel;
             // Page has been unloaded from UI
             Unloaded += (s, e) => ViewModel.Dispose();
+        }
+
+        public SettingsView(SettingsService settingsService, SettingsViewModel viewModel, Grid rootGrid, VisualStateGroup deviceStates, VisualStateGroup windowSize, VisualState xbox, Grid mobileGrid, TextBlock textHeader, Pivot infoPivot, StackPanel stackPanel, TextBlock appBuildTime, TextBlock appBuildBranch, TextBlock appVersion, Button disconnectSoundCloudButton, Button connectSoundCloudButton, Button disconnectFanBurstButton, Button connectFanBurstButton, ComboBox themeComboBox, ComboBox languageComboBox, ComboBoxItem language_English_US, ComboBoxItem language_French_FR, ComboBoxItem language_Dutch_NL, ComboBoxItem defaultTheme, ComboBoxItem darkTheme, ComboBoxItem lightTheme, bool contentLoaded)
+        {
+            SettingsService = settingsService;
+            ViewModel = viewModel;
+            RootGrid = rootGrid;
+            DeviceStates = deviceStates;
+            WindowSize = windowSize;
+            Xbox = xbox;
+            MobileGrid = mobileGrid;
+            TextHeader = textHeader;
+            InfoPivot = infoPivot;
+            StackPanel = stackPanel;
+            AppBuildTime = appBuildTime;
+            AppBuildBranch = appBuildBranch;
+            AppVersion = appVersion;
+            DisconnectSoundCloudButton = disconnectSoundCloudButton;
+            ConnectSoundCloudButton = connectSoundCloudButton;
+            DisconnectFanBurstButton = disconnectFanBurstButton;
+            ConnectFanBurstButton = connectFanBurstButton;
+            this.themeComboBox = themeComboBox;
+            LanguageComboBox = languageComboBox;
+            Language_English_US = language_English_US;
+            Language_French_FR = language_French_FR;
+            Language_Dutch_NL = language_Dutch_NL;
+            this.defaultTheme = defaultTheme;
+            this.darkTheme = darkTheme;
+            this.lightTheme = lightTheme;
+            _contentLoaded = contentLoaded;
+            Bindings = bindings;
         }
 
         /// <summary>
@@ -212,6 +245,11 @@ namespace SoundByte.UWP.Views.Application
             };
 
             await restartDialog.ShowAsync();
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,15 +1,16 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SoundByte.UWP")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SoundsClouds.UWP")]
+[assembly: AssemblyDescription("Soundcloud.com client based on Soundbyte")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Grid Entertainment")]
-[assembly: AssemblyProduct("SoundByte")]
-[assembly: AssemblyCopyright("Copyright © 2017 Grid Entertainment")]
+[assembly: AssemblyCompany("Mom Assistance")]
+[assembly: AssemblyProduct("SoundsClouds")]
+[assembly: AssemblyCopyright("Copyright © 2017 Mom Assistance")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -26,3 +27,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: ComVisible(false)]
+[assembly: NeutralResourcesLanguage("en-US")]
+

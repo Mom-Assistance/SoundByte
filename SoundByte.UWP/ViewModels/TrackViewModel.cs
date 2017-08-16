@@ -525,7 +525,9 @@ namespace SoundByte.UWP.ViewModels
         {
             // Only clean if we are in the background
             if (!App.IsBackground)
+            {
                 return;
+            }
 
             CleanModel();
 
